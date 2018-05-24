@@ -2,7 +2,7 @@
 
 ## Basic usage ##
 
-Inset code before google analytics code
+Inset code before google analytics
 ```
     <script type="text/javascript" src="ApGaOptOut.js"></script>
     <script type="text/javascript">
