@@ -16,6 +16,8 @@
         this.gaOptOutCookiePrefix = options.gaOptOutCookiePrefix;
         this.optOutCallEvent = options.optOutCallEvent;
         this.elementSelector = options.elementSelector;
+        this.showAlterAfterDeactivate = options.showAlterAfterDeactivate;
+        this.alterMessage = options.alterMessage;
 
         this.init();
     };
@@ -26,7 +28,9 @@
         gaAppId: '',
         gaOptOutCookiePrefix: 'ga-disable-',
         optOutCallEvent: 'click',
-        elementSelector: ''
+        elementSelector: '',
+        showAlterAfterDeactivate: false,
+        alterMessage: 'Google Analytics tracking has been deactivated in your browser for this website.'
     };
 
 
@@ -113,6 +117,9 @@
             this._log('Google analytics has disabled successfully.');
             this._setOptOutCookie();
             window[this.gaOptOutCookiePrefix + this.gaAppId] = true;
+            if(this.showAlterAfterDeactivate){
+                window.alert(this.alterMessage);
+            }
         },
 
 
