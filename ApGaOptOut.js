@@ -1,5 +1,7 @@
 /**
+ * @author <keshikashviligio@gmail.com>
  *
+ * This script allows user to disable Google analytics
  *
  *
  */
