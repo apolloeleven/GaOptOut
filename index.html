@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apollo11 Google Opt Out js demo</title>
+    <script type="text/javascript" src="ApGaOptOut.js"></script>
+    <script>
+        (function() {
+            window.onload = function () {
+                var gaOptOut = new ApGaOptOut({
+                    gaAppId: 'AU-sasdas-d',
+                    optOutCallEvent: 'click',
+                    elementSelector: '[href="#jsgaoptout"]',
+                    debug: false
+                });
+            }
+        })();
+
+    </script>
+</head>
+<body>
+   <a href="#jsgaoptout" class="jsgaoptout">Click here to disable google analytics</a>
+</body>
+</html>
