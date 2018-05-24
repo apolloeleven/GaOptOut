@@ -51,12 +51,14 @@
                 return;
             }
             var self = this,
-                el = document.querySelector(self.elementSelector);
-            if (el) {
-                el.addEventListener(self.optOutCallEvent, function () {
-                    self._log(self.optOutCallEvent + ' Triggered');
-                    self._setGaOptOut();
-                })
+                elements = document.querySelectorAll(self.elementSelector);
+            if (elements.length) {
+                for (var i = 0; i < elements.length; i++) {
+                    elements[i].addEventListener(self.optOutCallEvent, function () {
+                        self._log(self.optOutCallEvent + ' Triggered');
+                        self._setGaOptOut();
+                    })
+                }
             }
 
             this._checkGaOptOut();
